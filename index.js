@@ -4,10 +4,7 @@
  * @returns {Number} sum of numbers present in nums
  */
 function add(nums) {
-  let sum = 0;
-  nums.split(",").forEach((num) => {
-    sum += Number(num);
-  });
+  let sum = nums.split(",").reduce((total, num) => total + Number(num), 0);
   return sum;
 }
 
