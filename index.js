@@ -4,7 +4,11 @@
  * @returns {Number} sum of numbers present in nums
  */
 function add(nums) {
-  if (nums.length === 0) return 0;
+  let sum = 0;
+  nums.split(",").forEach((num) => {
+    sum += Number(num);
+  });
+  return sum;
 }
 
 module.exports = add;
