@@ -12,3 +12,8 @@ it("should return 5 when '5' is passed", function () {
 it("should return 10 when '2,8' is passed", function () {
   assert.equal(add("2,8"), 10);
 });
+
+it("should return 10 when '2\n3,5' is passed", function () {
+  assert.equal(add("2\n3,5"), 10);
+});
+s

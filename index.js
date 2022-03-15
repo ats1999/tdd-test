@@ -4,7 +4,11 @@
  * @returns {Number} sum of numbers present in nums
  */
 function add(nums) {
-  let sum = nums.split(",").reduce((total, num) => total + Number(num), 0);
+  let sum = nums.split(",").reduce((total, num) => {
+    return (
+      total + num.split("\n").reduce((total, num) => total + Number(num), 0)
+    );
+  }, 0);
   return sum;
 }
 
