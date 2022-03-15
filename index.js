@@ -1,11 +1,14 @@
+// remove delimiter from the string for further processing
 function removeDelimiter(str) {
   return str.substring(4, str.length);
 }
 
+// get delimiter
 function getDelimiter(str) {
   return str[2];
 }
 
+// return true if input contain delimiter
 function hasDelimiter(str) {
   return str.indexOf("//") === 0;
 }
@@ -26,10 +29,10 @@ function add(nums) {
 
   let negativeNumbers = [];
 
-  let sum = nums.split(delimiter).reduce((total, num) => {
+  let sum = nums.split(delimiter).reduce((totalSum, numStr) => {
     return (
-      total +
-      num.split("\n").reduce((total, num) => {
+      totalSum +
+      numStr.split("\n").reduce((total, num) => {
         num = Number(num);
 
         // store negative number
